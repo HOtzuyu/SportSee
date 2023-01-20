@@ -1,0 +1,8 @@
+@mixin fonts($state) {
+    $divers: map-get($fonts, $state);
+    font-family: map-get($divers, family);
+    font-weight: map-get($divers, weight);
+    font-size: map-get($divers, size);
+    color: map-get($divers, colour);
+    line-height: map-get($divers, line-height);
+}

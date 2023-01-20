@@ -1,0 +1,12 @@
+.dataSection {
+    margin-left: 224px;
+    margin-top: 68px;
+
+    &__salutation {
+        @include fonts(title-black);
+
+        & span {
+            color: $colourRed;
+        }
+    }
+}

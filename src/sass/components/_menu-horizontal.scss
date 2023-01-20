@@ -1,0 +1,23 @@
+.menuHorizontal {
+    height: 91px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 87px 14px 29px;
+    background-color: $colourBlack;
+    position: sticky;
+    z-index: 1;
+
+    &__link {
+        @include fonts(links);
+        text-decoration: none;
+
+        &:hover {
+            color: $colourRed;
+        }
+    }
+
+    & .active {
+        text-decoration: double;
+    }
+}

@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menuHorizontal {
+  height: 91px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 87px 14px 29px;
+  background-color: #020203;
+  position: sticky;
+  z-index: 1;
+}
+.menuHorizontal__link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+  line-height: 24px;
+  text-decoration: none;
+}
+.menuHorizontal__link:hover {
+  color: #FF0101;
+}
+.menuHorizontal .active {
+  text-decoration: double;
+}
+
+.menuVertical {
+  position: absolute;
+  background-color: #020203;
+  height: 100vh;
+  width: 117px;
+  padding-bottom: 59px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+}
+.menuVertical__icon--block {
+  width: 64px;
+  height: 64px;
+  background-color: #fff;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.menuVertical__copyright {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  line-height: 24px;
+  transform: rotate(-90deg);
+  width: 138px;
+  position: absolute;
+  bottom: 108px;
+}
+
+.dropdown__button {
+  display: flex;
+  cursor: pointer;
+}
+.dropdown__button--title {
+  position: relative;
+  margin-right: 1rem;
+}
+.dropdown__content {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100vw;
+  background-color: #020203;
+  padding: 25px 10px 25px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+}
+
+.reglage {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+.reglage__img {
+  margin: 0 10px;
+}
+
+.dataSection {
+  margin-left: 224px;
+  margin-top: 68px;
+}
+.dataSection__salutation {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  color: #020203;
+  line-height: 24px;
+}
+.dataSection__salutation span {
+  color: #FF0101;
+}
+
+/*# sourceMappingURL=style.css.map */

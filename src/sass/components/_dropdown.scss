@@ -1,0 +1,26 @@
+.dropdown {
+    &__button {
+        display: flex;
+        cursor: pointer;
+
+        &--title {
+            position: relative;
+            margin-right: 1rem;
+        }
+
+    }
+
+    &__content {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100vw;
+        background-color: $colourBlack;
+        padding: 25px 10px 25px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 30vh;
+    }
+}
