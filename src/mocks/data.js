@@ -13,3 +13,7 @@ async function customFetch(url) {
 export async function getUser(id) {
     return customFetch(`http://localhost:3000/user/${id}`);
 }
+
+export async function getUserActivity(id) {
+    return customFetch(`http://localhost:3000/user/${id}/activity`);
+}

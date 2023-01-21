@@ -1,0 +1,44 @@
+.activity {
+    width: 835px;
+    height: 320px;
+    background-color: $colourInfo;
+    border-radius: 5px;
+    position: absolute;
+    padding: 24px 26px 23px 32px;
+
+    &__Title {
+        @include fonts(info-titre);
+        position: absolute;
+    }
+
+    &__legend {
+        @include fonts(info-note);
+    }
+
+    &__tooltip {
+        background-color: $colourRed;
+        height: 63px;
+        width: 39px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border: none;
+
+        &--num {
+            font-family: Roboto;
+            font-size: 7px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0px;
+            text-align: center;
+            color: $colourWhite;
+        }
+
+    }
+
+}
+
+.recharts-text {
+    @include fonts(info-note);
+}

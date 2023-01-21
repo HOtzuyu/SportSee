@@ -29,7 +29,7 @@ function Dropdown() {
             className='dropdown__link menuHorizontal__link active'
             to='/user/12'
           >
-            Profil 12
+            Karl
           </Link>
 
           <Link
@@ -37,7 +37,7 @@ function Dropdown() {
             className='dropdown__link menuHorizontal__link active'
             to='/user/18'
           >
-            Profil 18
+            Cécilia
           </Link>
         </nav>
       ) : null}

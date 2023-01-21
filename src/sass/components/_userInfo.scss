@@ -1,0 +1,46 @@
+.userInfo {
+    width: 258px;
+    height: 124px;
+    display: flex;
+    align-items: center;
+    background-color: $colourInfo;
+    border-radius: 5px;
+
+    &__icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 24px;
+        margin-left: 32px;
+        border-radius: 6px;
+
+        &.calories {
+            background-color: rgba(255, 1, 1, 0.102);
+        }
+
+        &.proteines {
+            background-color: rgba(74, 184, 255, 0.102);
+        }
+
+        &.glucides {
+            background-color: rgba(249, 207, 36, 0.102);
+
+        }
+
+        &.lipides {
+            background-color: rgba(253, 81, 129, 0.1);
+        }
+    }
+
+    &__data {
+        &--value {
+            @include fonts(info)
+        }
+
+        &--name {
+            @include fonts(info-note)
+        }
+    }
+}

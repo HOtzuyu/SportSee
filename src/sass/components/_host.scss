@@ -1,0 +1,16 @@
+.salutation {
+    width: 100%;
+
+    &__title {
+        @include fonts(title-black);
+
+        & span {
+            color: $colourRed;
+        }
+    }
+
+    &__text {
+        @include fonts(text);
+        margin-top: 41px;
+    }
+}

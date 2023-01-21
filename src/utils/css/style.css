@@ -87,6 +87,124 @@
   height: 30vh;
 }
 
+.salutation {
+  width: 100%;
+}
+.salutation__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  color: #020203;
+  line-height: 24px;
+}
+.salutation__title span {
+  color: #FF0101;
+}
+.salutation__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #020203;
+  line-height: 24px;
+  margin-top: 41px;
+}
+
+.userInfo {
+  width: 258px;
+  height: 124px;
+  display: flex;
+  align-items: center;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+}
+.userInfo__icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 24px;
+  margin-left: 32px;
+  border-radius: 6px;
+}
+.userInfo__icon.calories {
+  background-color: rgba(255, 1, 1, 0.102);
+}
+.userInfo__icon.proteines {
+  background-color: rgba(74, 184, 255, 0.102);
+}
+.userInfo__icon.glucides {
+  background-color: rgba(249, 207, 36, 0.102);
+}
+.userInfo__icon.lipides {
+  background-color: rgba(253, 81, 129, 0.1);
+}
+.userInfo__data--value {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #020203;
+  line-height: 24px;
+}
+.userInfo__data--name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #74798C;
+  line-height: 24px;
+}
+
+.activity {
+  width: 835px;
+  height: 320px;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+  position: absolute;
+  padding: 24px 26px 23px 32px;
+}
+.activity__Title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #20253A;
+  line-height: 24px;
+  position: absolute;
+}
+.activity__legend {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #74798C;
+  line-height: 24px;
+}
+.activity__tooltip {
+  background-color: #FF0101;
+  height: 63px;
+  width: 39px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: none;
+}
+.activity__tooltip--num {
+  font-family: Roboto;
+  font-size: 7px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #fff;
+}
+
+.recharts-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #74798C;
+  line-height: 24px;
+}
+
 .reglage {
   display: flex;
   justify-content: center;
@@ -99,18 +217,29 @@
 }
 
 .dataSection {
-  margin-left: 224px;
-  margin-top: 68px;
+  position: absolute;
+  top: 159px;
+  left: 224px;
+  max-width: 1126px;
+  max-height: 779px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.dataSection__salutation {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 48px;
-  color: #020203;
-  line-height: 24px;
+.dataSection__chart {
+  height: 613px;
+  width: 100%;
+  position: relative;
 }
-.dataSection__salutation span {
-  color: #FF0101;
+.dataSection__chart--userInfo {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */
