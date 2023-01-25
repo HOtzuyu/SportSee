@@ -4,7 +4,7 @@
     width: 258px;
     background-color: #ff0000;
     border-radius: 10px;
-    margin-right: 2%;
+    padding: 0 15px;
 
     &__text {
         @include fonts(info-titre);

@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import Dropdown from "../Dropdown/dropdown";
 import Logo from "../../assets/logo.svg";
 import "../../utils/css/style.css";
@@ -24,7 +23,6 @@ function MenuHorizontal() {
       <Link className='menuHorizontal__link active' to='/community'>
         Communauté
       </Link>
-      }
     </nav>
   );
 }

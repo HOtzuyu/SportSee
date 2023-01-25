@@ -85,52 +85,50 @@ const Sessions = () => {
   return (
     <div className='sessions'>
       <div className='sessions__text'>Durée moyenne des sessions</div>
-      {userSessions && (
-        <ResponsiveContainer width='100%' height='100%'>
-          <LineChart
-            data={userSessions.sessions}
-            margin={{
-              top: 30,
-              right: 0,
-              left: 0,
-              bottom: 30,
+      <ResponsiveContainer width='100%' height='100%'>
+        <LineChart
+          data={userSessions.sessions}
+          margin={{
+            top: 30,
+            right: 0,
+            left: 0,
+            bottom: 30,
+          }}
+        >
+          <CartesianGrid vertical={false} horizontal={false} />
+          <Tooltip
+            content={<CustomTooltip />}
+            animationEasing='easing-out'
+            cursor={<CustomCursor />}
+          />
+
+          <XAxis
+            dataKey='day'
+            tickFormatter={weekDays}
+            tick={{ fill: "white", opacity: ".6" }}
+            tickLine={false}
+            tickMargin={20}
+            interval='preserveStartEnd'
+            axisLine={false}
+            dy={10}
+          />
+
+          <YAxis hide={true} domain={["dataMin", "dataMax +10"]} />
+
+          <Line
+            type='natural'
+            dataKey='sessionLength'
+            stroke='white'
+            strokeWidth={3}
+            dot={false}
+            activeDot={{
+              fill: "white",
+              strokeOpacity: ".5",
+              strokeWidth: "10",
             }}
-          >
-            <CartesianGrid vertical={false} horizontal={false} />
-            <Tooltip
-              content={<CustomTooltip />}
-              animationEasing='easing-out'
-              cursor={<CustomCursor />}
-            />
-
-            <XAxis
-              dataKey='day'
-              tickFormatter={weekDays}
-              tick={{ fill: "white", opacity: ".6" }}
-              tickLine={false}
-              tickMargin={20}
-              interval='preserveStartEnd'
-              axisLine={false}
-              dy={10}
-            />
-
-            <YAxis hide={true} domain={["dataMin", "dataMax +10"]} />
-
-            <Line
-              type='natural'
-              dataKey='sessionLength'
-              stroke='white'
-              strokeWidth={3}
-              dot={false}
-              activeDot={{
-                fill: "white",
-                strokeOpacity: ".5",
-                strokeWidth: "10",
-              }}
-            />
-          </LineChart>
-        </ResponsiveContainer>
-      )}
+          />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 };
