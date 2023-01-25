@@ -1,0 +1,42 @@
+.score {
+    height: 263px;
+    width: 258px;
+    padding: 24px 30px;
+    background-color: $colourInfo;
+    border-radius: 5px;
+
+    &__title {
+        @include fonts(info-titre);
+        top: 4%;
+        left: 4%;
+
+    }
+
+    &__graphic {
+        @include center;
+        position: relative;
+
+        &--texte {
+            @include center;
+            @include fonts(info-note);
+            flex-direction: column;
+            position: absolute;
+            width: 95px;
+            height: 56px;
+            text-align: center;
+
+        }
+    }
+
+}
+
+.pourcent {
+    @include fonts(info);
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.recharts-pie-sector {
+    stroke-linejoin: round;
+    stroke-width: 10px;
+}

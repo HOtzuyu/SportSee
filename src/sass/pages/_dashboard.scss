@@ -25,5 +25,13 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
+        &--dis {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 835px;
+            bottom: 0;
+        }
     }
 }

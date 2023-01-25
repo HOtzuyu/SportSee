@@ -1,0 +1,19 @@
+.sessions {
+    position: relative;
+    height: 263px;
+    width: 258px;
+    background-color: #ff0000;
+    border-radius: 10px;
+    margin-right: 2%;
+
+    &__text {
+        @include fonts(info-titre);
+        color: $colourWhite;
+        opacity: 0.5;
+        position: absolute;
+        top: 5%;
+        left: 20px;
+        width: 147px;
+        height: 48px;
+    }
+}

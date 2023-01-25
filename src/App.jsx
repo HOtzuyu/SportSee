@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import "../src/utils/css/style.css";
 
-import MenuHorizontal from "./Components/Menu-horizontal/menu-horizontal";
 import Profil from "./pages/profil/Profil";
 
 import Dashboard from "./pages/dashboard/Dashboard";
@@ -14,7 +13,6 @@ const App = () => {
   return (
     <React.StrictMode>
       <Router>
-        <MenuHorizontal />
         <Routes>
           <Route path='/' element={<Profil />} />
           <Route path='/user/:id' element={<Dashboard />} />

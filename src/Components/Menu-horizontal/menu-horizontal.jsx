@@ -14,34 +14,17 @@ function MenuHorizontal() {
       <Link to='/' className='menuHorizontal__logo'>
         <img src={Logo} alt='logo'></img>
       </Link>
-      {useLocation().pathname === "/" ? (
-        <Link className='menuHorizontal__link active' to='/'>
-          Accueil
-        </Link>
-      ) : (
-        <Link className='menuHorizontal__link' to='/'>
-          Accueil
-        </Link>
-      )}
+      <Link className='menuHorizontal__link active' to='/'>
+        Accueil
+      </Link>
       <Dropdown />
-      {useLocation().pathname === "/setting" ? (
-        <Link className='menuHorizontal__link active' to='/setting'>
-          Réglage
-        </Link>
-      ) : (
-        <Link className='menuHorizontal__link' to='/setting'>
-          Réglage
-        </Link>
-      )}
-      {useLocation().pathname === "/community" ? (
-        <Link className='menuHorizontal__link active' to='/community'>
-          Communauté
-        </Link>
-      ) : (
-        <Link className='menuHorizontal__link' to='/community'>
-          Communauté
-        </Link>
-      )}
+      <Link className='menuHorizontal__link active' to='/setting'>
+        Réglage
+      </Link>
+      <Link className='menuHorizontal__link active' to='/community'>
+        Communauté
+      </Link>
+      }
     </nav>
   );
 }

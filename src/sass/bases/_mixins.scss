@@ -6,3 +6,9 @@
     color: map-get($divers, colour);
     line-height: map-get($divers, line-height);
 }
+
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

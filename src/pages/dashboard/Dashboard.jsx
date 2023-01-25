@@ -8,6 +8,10 @@ import Host from "../../Components/Host/Host";
 import MenuVertical from "../../Components/Menu-vertical/menu-vertical";
 import UserInfo from "../../Components/UserInfo/UserInfo";
 import Activity from "../../Components/Activity/Activity";
+import Sessions from "../../Components/Session/Session";
+import Performance from "../../Components/Performance/Performance";
+import Score from "../../Components/Score/Score";
+import MenuHorizontal from "../../Components/Menu-horizontal/menu-horizontal";
 
 import calories from "../../assets/calories.svg";
 import glucides from "../../assets/glucides.svg";
@@ -38,12 +42,17 @@ function Dashboard() {
 
   return (
     <div>
+      <MenuHorizontal />
       <MenuVertical />
       <div className='dataSection'>
         <Host />
         <div className='dataSection__chart'>
           <Activity />
-          <div className='dataSection__chart--dis'></div>
+          <div className='dataSection__chart--dis'>
+            <Sessions />
+            <Performance />
+            <Score />
+          </div>
           <div className='dataSection__chart--userInfo'>
             <UserInfo
               name='Calories'

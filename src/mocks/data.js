@@ -10,10 +10,20 @@ async function customFetch(url) {
     }
 }
 
+let link = "http://localhost:3000/user/"
+
 export async function getUser(id) {
-    return customFetch(`http://localhost:3000/user/${id}`);
+    return customFetch(`${link}+${id}`);
 }
 
 export async function getUserActivity(id) {
-    return customFetch(`http://localhost:3000/user/${id}/activity`);
+    return customFetch(`${link}+${id}/activity`);
+}
+
+export async function getUserPerformance(id) {
+    return customFetch(`${link}+${id}/performance`)
+}
+
+export async function getUserAverageSessions(id) {
+    return customFetch(`${link}+${id}/average-sessions`);
 }

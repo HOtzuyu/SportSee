@@ -50,24 +50,13 @@ function Activity() {
     return null;
   };
 
-  const customTickDay = (day) => {
-    //console.log(day);
-    return Number(day.slice(8)); //méthode slice() pour extraire les deux derniers caractères de la chaîne day et Number() est utilisée pour convertir la chaîne extraite en nombre.
-  };
-
   return (
     <div className='activity'>
       <p className='activity__Title'>Activité quotidienne</p>
       <ResponsiveContainer width='100%' height='100%'>
-        <BarChart data={userActivity?.sessions}>
+        <BarChart data={userActivity.sessions}>
           <CartesianGrid strokeDasharray='2 2' vertical={false} />
-          <XAxis
-            dataKey='day'
-            axisLine={false}
-            tickLine={false}
-            dy={15}
-            tickFormatter={customTickDay}
-          />
+          <XAxis dataKey='day' axisLine={false} tickLine={false} dy={15} />
           <YAxis
             tickCount={3}
             orientation='right'
