@@ -20,7 +20,6 @@ import proteines from "../../assets/proteines.svg";
 
 function Dashboard() {
   const { id } = useParams();
-
   const [error, setError] = useState(false);
   const [user, setUser] = useState({});
 

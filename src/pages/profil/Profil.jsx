@@ -1,12 +1,14 @@
+/**
+ * Selected the profil for see the informations
+ */
+
 import React from "react";
 import { Link } from "react-router-dom";
 import karl from "../../assets/karl.png";
 import cecilia from "../../assets/cecilia.png";
 
-import "../../utils/css/style.css";
 /**
  * Displays user profile images.
- *
  * @returns {JSX.Element} A JSX element representing the user profile images.
  */
 const Profil = () => {
