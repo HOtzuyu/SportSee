@@ -1,1 +1,1 @@
-![logo](\src\assets\logo.svg)
+![logo](src/assets/logo.svg)
