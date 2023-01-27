@@ -1,6 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import {
   BarChart,
   Bar,
@@ -12,28 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import { getUserActivity } from "../../mocks/data";
-
-function Activity() {
-  const { id } = useParams();
-  const [userActivity, setUserActivity] = useState({});
-  const [error, setError] = useState("");
-  useEffect(() => {
-    async function init() {
-      try {
-        let response = await getUserActivity(id);
-        setUserActivity(response.data);
-      } catch (err) {
-        console.log("===== error =====", err);
-        setError(true);
-      }
-    }
-    init();
-  }, [id]);
-  if (error) {
-    return <span>Oups il y a eu un problème</span>;
-  }
-
+function Activity({ data }) {
   const activity__legend = (value) => {
     return <span className='activity__legend'>{value}</span>;
   };
@@ -54,7 +31,7 @@ function Activity() {
     <div className='activity'>
       <p className='activity__Title'>Activité quotidienne</p>
       <ResponsiveContainer width='100%' height='100%'>
-        <BarChart data={userActivity.sessions}>
+        <BarChart data={data}>
           <CartesianGrid strokeDasharray='2 2' vertical={false} />
           <XAxis dataKey='day' axisLine={false} tickLine={false} dy={15} />
           <YAxis

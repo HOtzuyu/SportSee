@@ -1,6 +1,8 @@
-async function customFetch(url) {
+let link = "http://localhost:3000/user/"
+
+export async function getFetch(id, context) {
     try {
-        const response = await fetch(url);
+        const response = await fetch(`${link}+${id}/${context}`);
         if (response.status !== 200) {
             return new Error("Problème d'accès aux données de l'API");
         }
@@ -8,22 +10,4 @@ async function customFetch(url) {
     } catch {
         throw new Error("Problème d'accès aux données de l'API");
     }
-}
-
-let link = "http://localhost:3000/user/"
-
-export async function getUser(id) {
-    return customFetch(`${link}+${id}`);
-}
-
-export async function getUserActivity(id) {
-    return customFetch(`${link}+${id}/activity`);
-}
-
-export async function getUserPerformance(id) {
-    return customFetch(`${link}+${id}/performance`)
-}
-
-export async function getUserAverageSessions(id) {
-    return customFetch(`${link}+${id}/average-sessions`);
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { getUser } from "../../mocks/data";
+import { fetchering } from "../../mocks/fetch";
 
 import Host from "../../Components/Host/Host";
 import MenuVertical from "../../Components/Menu-vertical/menu-vertical";
@@ -22,18 +22,19 @@ function Dashboard() {
   const { id } = useParams();
   const [error, setError] = useState(false);
   const [user, setUser] = useState({});
+  const [userActivity, setUserActivity] = useState({});
+  const [userSessions, setUserSessions] = useState({});
+  const [userPerformance, setUserPerformance] = useState({});
 
   useEffect(() => {
-    async function init() {
-      try {
-        let response = await getUser(id);
-        setUser(response.data);
-      } catch (err) {
-        console.log("===== error =====", err);
-        setError(true);
-      }
-    }
-    init();
+    fetchering(
+      id,
+      setUser,
+      setUserActivity,
+      setUserPerformance,
+      setUserSessions,
+      setError,
+    );
   }, [id]);
   if (error) {
     return <span>Oups il y a eu un problème</span>;
@@ -44,13 +45,13 @@ function Dashboard() {
       <MenuHorizontal />
       <MenuVertical />
       <div className='dataSection'>
-        <Host />
+        <Host name={user?.userInfos?.firstName} />
         <div className='dataSection__chart'>
-          <Activity />
+          <Activity data={userActivity?.sessions} />
           <div className='dataSection__chart--dis'>
-            <Sessions />
-            <Performance />
-            <Score />
+            <Sessions data={userSessions?.sessions} />
+            <Performance data={userPerformance?.data} />
+            <Score dataScore={user?.score} dataTodayScore={user?.todayScore} />
           </div>
           <div className='dataSection__chart--userInfo'>
             <UserInfo

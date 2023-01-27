@@ -1,31 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { ResponsiveContainer, RadialBarChart, RadialBar } from "recharts";
 import React from "react";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getUser } from "../../mocks/data";
 
-const Score = () => {
-  const { id } = useParams();
-  const [user, setUser] = useState({});
-  const [error, setError] = useState("");
-  useEffect(() => {
-    async function init() {
-      try {
-        let response = await getUser(id);
-        setUser(response.data);
-      } catch (err) {
-        console.log("===== error =====", err);
-        setError(true);
-      }
-    }
-    init();
-  }, [id]);
-  if (error) {
-    return <span>Oups il y a eu un problème</span>;
-  }
-
-  const scoreValue = user?.score || user?.todayScore;
+function Score({ dataScore, dataTodayScore }) {
+  const scoreValue = dataScore || dataTodayScore;
   const scorePurcent = scoreValue * 100;
   const scoreValueData = [
     { name: scorePurcent + "%", value: scorePurcent, fill: "#FF0101" },
@@ -60,5 +38,5 @@ const Score = () => {
       </div>
     </div>
   );
-};
+}
 export default Score;

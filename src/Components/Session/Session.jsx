@@ -8,27 +8,8 @@ import {
   Rectangle,
   CartesianGrid,
 } from "recharts";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getUserAverageSessions } from "../../mocks/data";
 
-const Sessions = () => {
-  const { id } = useParams();
-  const [userSessions, setUserSessions] = useState({});
-  const [error, setError] = useState("");
-  useEffect(() => {
-    async function init() {
-      try {
-        let response = await getUserAverageSessions(id);
-        setUserSessions(response.data);
-        setError("");
-      } catch (error) {
-        setError(error.message);
-      }
-    }
-    init();
-  }, [id]);
-
+function Sessions({ data }) {
   /**
    * add const week with the letter of each day of the week
    * @param {number} num
@@ -36,7 +17,7 @@ const Sessions = () => {
    */
   function weekDays(num) {
     const week = ["L", "M", "M", "J", "V", "S", "D"];
-    return week[+num - 1];
+    return week[num - 1];
   }
 
   /**
@@ -75,19 +56,12 @@ const Sessions = () => {
     );
   }
 
-  if (error !== "") {
-    return (
-      <div className='sessions'>
-        <p>{error}</p>
-      </div>
-    );
-  }
   return (
     <div className='sessions'>
       <div className='sessions__text'>Durée moyenne des sessions</div>
       <ResponsiveContainer width='100%' height='100%'>
         <LineChart
-          data={userSessions.sessions}
+          data={data}
           margin={{
             top: 30,
             right: 0,
@@ -131,6 +105,6 @@ const Sessions = () => {
       </ResponsiveContainer>
     </div>
   );
-};
+}
 
 export default Sessions;

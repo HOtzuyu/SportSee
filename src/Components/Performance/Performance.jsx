@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import {
   Radar,
   RadarChart,
@@ -9,29 +7,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import { getUserPerformance } from "../../mocks/data";
-
-const Performance = () => {
-  const { id } = useParams();
-  const [userPerformance, setUserPerformance] = useState({});
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    async function init() {
-      try {
-        let response = await getUserPerformance(id);
-        setUserPerformance(response.data);
-      } catch (err) {
-        console.log("===== error =====", err);
-        setError(true);
-      }
-    }
-    init();
-  }, [id]);
-  if (error) {
-    return <span>Oups il y a eu un problème</span>;
-  }
-
+function Performance({ data }) {
   function valeurs(num) {
     const perf = [
       "Intensité",
@@ -47,7 +23,7 @@ const Performance = () => {
     <div className='performance'>
       <ResponsiveContainer width='100%' height='100%'>
         <RadarChart
-          data={userPerformance?.data}
+          data={data}
           margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
         >
           <PolarGrid radialLines={false} />
@@ -58,6 +34,6 @@ const Performance = () => {
       </ResponsiveContainer>
     </div>
   );
-};
+}
 
 export default Performance;
