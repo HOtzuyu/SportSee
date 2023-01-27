@@ -31,15 +31,15 @@
 }
 
 .menuVertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
   background-color: #020203;
   height: 100vh;
   width: 117px;
   padding-bottom: 59px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   top: 0;
 }
 .menuVertical__icon--block {
@@ -124,11 +124,11 @@
   }
 }
 .userInfo__icon {
-  width: 60px;
-  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60px;
+  height: 60px;
   margin-right: 24px;
   margin-left: 32px;
   border-radius: 6px;
