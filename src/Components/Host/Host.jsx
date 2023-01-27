@@ -1,3 +1,8 @@
+/**
+ * Custom Hello word with personal name of user
+ * @param {string} name
+ * @returns format hello [name]
+ */
 function Host({ name }) {
   return (
     <div className='salutation'>

@@ -1,9 +1,11 @@
+/**
+ * All elements of charts
+ */
+
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
 import { fetchering } from "../../mocks/fetch";
-
 import Host from "../../Components/Host/Host";
 import MenuVertical from "../../Components/Menu-vertical/menu-vertical";
 import UserInfo from "../../Components/UserInfo/UserInfo";
@@ -12,12 +14,15 @@ import Sessions from "../../Components/recharts/Session/Session";
 import Performance from "../../Components/recharts/Performance/Performance";
 import Score from "../../Components/recharts/Score/Score";
 import MenuHorizontal from "../../Components/Menu-horizontal/menu-horizontal";
-
 import calories from "../../assets/calories.svg";
 import glucides from "../../assets/glucides.svg";
 import lipides from "../../assets/lipides.svg";
 import proteines from "../../assets/proteines.svg";
 
+/**
+ *
+ * @returns {JSX element} datavisualisation of all selected user datas
+ */
 function Dashboard() {
   const { id } = useParams();
   const [error, setError] = useState(false);
@@ -26,6 +31,10 @@ function Dashboard() {
   const [userSessions, setUserSessions] = useState({});
   const [userPerformance, setUserPerformance] = useState({});
 
+  /**
+   * call all fetch _ if error, return error span
+   * commuication with json
+   */
   useEffect(() => {
     fetchering(
       id,

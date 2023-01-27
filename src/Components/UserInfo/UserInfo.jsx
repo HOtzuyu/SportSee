@@ -1,3 +1,12 @@
+/**
+ * Creat card of user informations
+ * @param {string} name
+ * @param {int} value
+ * @param {string} measure
+ * @param {string} svg
+ * @param {string} extraClass
+ * @returns a card with user informations
+ */
 function UserInfo({ name, value, measure, svg, extraClass }) {
   return (
     <div className='userInfo'>

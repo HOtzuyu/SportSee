@@ -1,5 +1,14 @@
+/**
+ * depend the location of .json
+ */
 let link = "http://localhost:3000/user/"
 
+/**
+ * call the JSON
+ * @param {string} id 
+ * @param {string} context 
+ * @returns promess || error
+ */
 export async function getFetch(id, context) {
     try {
         const response = await fetch(`${link}+${id}/${context}`);

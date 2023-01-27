@@ -63,4 +63,4 @@ $ npm run sass
 $ npm start
 ```
 
-:Side information: Clone, install and run `the back-end` (with yarn) before start the project
+Side information: Clone, install and run `the back-end` (with yarn) before start the project

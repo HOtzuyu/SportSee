@@ -10,12 +10,28 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+/**
+ * creat a line chart for look the activity in a week of the user
+ * @param {array} data
+ * @returns a bar chart
+ */
 function Activity({ data }) {
-  const activity__legend = (value) => {
+  /**
+   * formating value for legend
+   * @param {*} value
+   * @returns value
+   */
+  function activity__legend(value) {
     return <span className='activity__legend'>{value}</span>;
-  };
+  }
 
-  const tooltip = ({ active, payload }) => {
+  /**
+   * format creen hover
+   * @param {boolean} active
+   * @param {int} payload
+   * @returns screen values
+   */
+  function tooltip({ active, payload }) {
     if (active) {
       return (
         <div className='activity__tooltip'>
@@ -25,7 +41,7 @@ function Activity({ data }) {
       );
     }
     return null;
-  };
+  }
 
   return (
     <div className='activity'>

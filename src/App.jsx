@@ -1,14 +1,15 @@
+/**
+ * File for Routers
+ */
+
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-import "../src/utils/css/style.css";
-
 import Profil from "./pages/profil/Profil";
-
 import Dashboard from "./pages/dashboard/Dashboard";
 import Setting from "./pages/setting/Setting";
 import Community from "./pages/community/Community";
 import Error from "./Components/Error/error";
+import "../src/utils/css/style.css";
 
 const App = () => {
   return (

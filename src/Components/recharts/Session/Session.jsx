@@ -1,3 +1,7 @@
+/**
+ * Datavisualisation of sessions in a week
+ */
+
 import {
   LineChart,
   Line,
@@ -9,10 +13,15 @@ import {
   CartesianGrid,
 } from "recharts";
 
+/**
+ * creat a line chart for look the sessions in a week of the user
+ * @param {array} data
+ * @returns a line chart
+ */
 function Sessions({ data }) {
   /**
    * add const week with the letter of each day of the week
-   * @param {number} num
+   * @param {int} num
    * @returns the first letter of the day
    */
   function weekDays(num) {
@@ -36,11 +45,6 @@ function Sessions({ data }) {
     );
   }
 
-  /**
-   *
-   * @param {*} props
-   * @returns
-   */
   function CustomCursor(props) {
     const { points, width, height } = props;
     const { x, y } = points[0];

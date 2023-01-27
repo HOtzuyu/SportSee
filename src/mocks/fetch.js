@@ -1,7 +1,20 @@
+/**
+ * Recup all data from .json
+ */
+
 import {
   getFetch
 } from "./data";
 
+/**
+ * 
+ * @param {string} id 
+ * @param {const} setUser 
+ * @param {const} setUserActivity 
+ * @param {const} setUserPerformance 
+ * @param {const} setUserSessions 
+ * @param {const} setError 
+ */
 export function fetchering(id, setUser, setUserActivity, setUserPerformance, setUserSessions, setError) {
   async function init() {
     try {

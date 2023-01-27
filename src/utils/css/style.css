@@ -8,8 +8,8 @@
 .menuHorizontal {
   height: 91px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 19px 87px 14px 29px;
   background-color: #020203;
   position: sticky;

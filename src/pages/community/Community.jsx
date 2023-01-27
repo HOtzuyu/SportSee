@@ -1,3 +1,7 @@
+/**
+ * JSX for communityPage (communauté)
+ */
+
 import UnderConstruction from "../../Components/UnderConstruction/UnderConstruction";
 import MenuHorizontal from "../../Components/Menu-horizontal/menu-horizontal";
 function Community() {

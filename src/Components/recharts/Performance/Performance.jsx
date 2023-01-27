@@ -7,7 +7,17 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+/**
+ * creat a radar chart for look the parformances of the user
+ * @param {array} data
+ * @returns a radar chart
+ */
 function Performance({ data }) {
+  /**
+   * count the number of element and return a translate of the elements
+   * @param {int} num
+   * @returns an array of string
+   */
   function valeurs(num) {
     const perf = [
       "Intensité",

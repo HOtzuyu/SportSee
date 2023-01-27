@@ -1,10 +1,21 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+/**
+ * Datavisualisation of the score
+ */
+
 import { ResponsiveContainer, RadialBarChart, RadialBar } from "recharts";
 import React from "react";
 
+/**
+ * creat a radial chart for look the score of the user
+ * @param {int} dataScore
+ * @param {int} dataTodayScore
+ * @returns a radial chart
+ */
 function Score({ dataScore, dataTodayScore }) {
+  // scoreValue === user id's score
   const scoreValue = dataScore || dataTodayScore;
   const scorePurcent = scoreValue * 100;
+  // creat a second cercle for base 100
   const scoreValueData = [
     { name: scorePurcent + "%", value: scorePurcent, fill: "#FF0101" },
     { name: "100%", value: 100, fill: "#ffffff00" },
@@ -39,4 +50,5 @@ function Score({ dataScore, dataTodayScore }) {
     </div>
   );
 }
+
 export default Score;

@@ -1,5 +1,5 @@
 /**
- * Selected the profil for see the informations
+ * Selected the profil for see the informations [Home page]
  */
 
 import React from "react";
