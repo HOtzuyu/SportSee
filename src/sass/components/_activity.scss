@@ -6,6 +6,11 @@
     position: absolute;
     padding: 24px 26px 23px 32px;
 
+    @include smaller {
+        width: 660px;
+        height: 220px;
+    }
+
     &__Title {
         @include fonts(info-titre);
         position: absolute;
@@ -41,4 +46,8 @@
 
 .recharts-text {
     @include fonts(info-note);
+
+    @include smaller {
+        font-size: 10px;
+    }
 }

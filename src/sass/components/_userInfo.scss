@@ -6,6 +6,11 @@
     background-color: $colourInfo;
     border-radius: 5px;
 
+    @include smaller {
+        width: 180px;
+        height: 120px;
+    }
+
     &__icon {
         width: 60px;
         height: 60px;
@@ -15,6 +20,11 @@
         margin-right: 24px;
         margin-left: 32px;
         border-radius: 6px;
+
+        @include smaller {
+            width: 50px;
+            height: 50px;
+        }
 
         &.calories {
             background-color: rgba(255, 1, 1, 0.102);
@@ -36,11 +46,19 @@
 
     &__data {
         &--value {
-            @include fonts(info)
+            @include fonts(info);
+
+            @include smaller {
+                font-size: 15px;
+            }
         }
 
         &--name {
-            @include fonts(info-note)
+            @include fonts(info-note);
+
+            @include smaller {
+                font-size: 13px;
+            }
         }
     }
 }

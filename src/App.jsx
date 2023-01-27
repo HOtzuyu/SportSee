@@ -8,6 +8,7 @@ import Profil from "./pages/profil/Profil";
 import Dashboard from "./pages/dashboard/Dashboard";
 import Setting from "./pages/setting/Setting";
 import Community from "./pages/community/Community";
+import Error from "./Components/Error/error";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path='/user/:id' element={<Dashboard />} />
           <Route path='/setting' element={<Setting />} />
           <Route path='/community' element={<Community />} />
+          <Route path='*' element={<Error />} />
         </Routes>
       </Router>
     </React.StrictMode>

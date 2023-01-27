@@ -1,6 +1,5 @@
 .score {
-    height: 263px;
-    width: 258px;
+    @include cards;
     padding: 24px 30px;
     background-color: $colourInfo;
     border-radius: 5px;

@@ -117,6 +117,12 @@
   background-color: #FBFBFB;
   border-radius: 5px;
 }
+@media screen and (max-width: 1024px) {
+  .userInfo {
+    width: 180px;
+    height: 120px;
+  }
+}
 .userInfo__icon {
   width: 60px;
   height: 60px;
@@ -126,6 +132,12 @@
   margin-right: 24px;
   margin-left: 32px;
   border-radius: 6px;
+}
+@media screen and (max-width: 1024px) {
+  .userInfo__icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 .userInfo__icon.calories {
   background-color: rgba(255, 1, 1, 0.102);
@@ -146,12 +158,22 @@
   color: #020203;
   line-height: 24px;
 }
+@media screen and (max-width: 1024px) {
+  .userInfo__data--value {
+    font-size: 15px;
+  }
+}
 .userInfo__data--name {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: #74798C;
   line-height: 24px;
+}
+@media screen and (max-width: 1024px) {
+  .userInfo__data--name {
+    font-size: 13px;
+  }
 }
 
 .activity {
@@ -161,6 +183,12 @@
   border-radius: 5px;
   position: absolute;
   padding: 24px 26px 23px 32px;
+}
+@media screen and (max-width: 1024px) {
+  .activity {
+    width: 660px;
+    height: 220px;
+  }
 }
 .activity__Title {
   font-family: "Roboto", sans-serif;
@@ -204,6 +232,11 @@
   color: #74798C;
   line-height: 24px;
 }
+@media screen and (max-width: 1024px) {
+  .recharts-text {
+    font-size: 10px;
+  }
+}
 
 .performance {
   height: 263px;
@@ -213,6 +246,12 @@
   color: #fff;
   padding: 30px 5px;
 }
+@media screen and (max-width: 1024px) {
+  .performance {
+    width: 200px;
+    height: auto;
+  }
+}
 
 .sessions {
   position: relative;
@@ -221,6 +260,12 @@
   background-color: #ff0000;
   border-radius: 10px;
   padding: 0 15px;
+}
+@media screen and (max-width: 1024px) {
+  .sessions {
+    width: 200px;
+    height: auto;
+  }
 }
 .sessions__text {
   font-family: "Roboto", sans-serif;
@@ -244,6 +289,12 @@
   background-color: #FBFBFB;
   border-radius: 5px;
   position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .score {
+    width: 200px;
+    height: auto;
+  }
 }
 .score__title {
   font-family: "Roboto", sans-serif;
@@ -317,10 +368,23 @@
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (max-width: 1024px) {
+  .dataSection {
+    max-width: 885px;
+    max-height: 660px;
+    top: 105px;
+    left: 125px;
+  }
+}
 .dataSection__chart {
   height: 613px;
   width: 100%;
   position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .dataSection__chart {
+    height: 100%;
+  }
 }
 .dataSection__chart--userInfo {
   position: absolute;
@@ -336,6 +400,11 @@
   justify-content: space-between;
   width: 835px;
   bottom: 0;
+}
+@media screen and (max-width: 1024px) {
+  .dataSection__chart--dis {
+    width: 660px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

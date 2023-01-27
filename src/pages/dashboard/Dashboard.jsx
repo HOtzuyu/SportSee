@@ -7,10 +7,10 @@ import { fetchering } from "../../mocks/fetch";
 import Host from "../../Components/Host/Host";
 import MenuVertical from "../../Components/Menu-vertical/menu-vertical";
 import UserInfo from "../../Components/UserInfo/UserInfo";
-import Activity from "../../Components/Activity/Activity";
-import Sessions from "../../Components/Session/Session";
-import Performance from "../../Components/Performance/Performance";
-import Score from "../../Components/Score/Score";
+import Activity from "../../Components/recharts/Activity/Activity";
+import Sessions from "../../Components/recharts/Session/Session";
+import Performance from "../../Components/recharts/Performance/Performance";
+import Score from "../../Components/recharts/Score/Score";
 import MenuHorizontal from "../../Components/Menu-horizontal/menu-horizontal";
 
 import calories from "../../assets/calories.svg";

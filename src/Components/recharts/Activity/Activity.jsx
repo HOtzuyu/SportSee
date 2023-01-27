@@ -48,7 +48,7 @@ function Activity({ data }) {
             iconType='circle'
             iconSize={8}
             wrapperStyle={{
-              paddingBottom: 60,
+              paddingBottom: 50,
             }}
             formatter={activity__legend}
           />

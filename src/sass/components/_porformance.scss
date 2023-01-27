@@ -1,6 +1,5 @@
 .performance {
-    height: 263px;
-    width: 258px;
+    @include cards;
     background-color: #282d30;
     border-radius: 5px;
     color: $colourWhite;

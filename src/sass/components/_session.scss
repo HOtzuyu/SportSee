@@ -1,7 +1,6 @@
 .sessions {
     position: relative;
-    height: 263px;
-    width: 258px;
+    @include cards;
     background-color: #ff0000;
     border-radius: 10px;
     padding: 0 15px;

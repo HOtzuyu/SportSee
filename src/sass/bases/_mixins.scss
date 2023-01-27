@@ -12,3 +12,19 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin smaller {
+    @media screen and (max-width : map-get($breakpoints, smaller)) {
+        @content;
+    }
+}
+
+@mixin cards {
+    height: 263px;
+    width: 258px;
+
+    @include smaller {
+        width: 200px;
+        height: auto;
+    }
+}
