@@ -95,6 +95,6 @@ function Activity({ data }) {
 
 export default Activity;
 
-Activity.prototype = {
+Activity.propTypes = {
   data: PropTypes.array.isRequired,
 };

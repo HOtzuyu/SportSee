@@ -31,9 +31,9 @@ function UserInfo({ name, value, measure, svg, extraClass }) {
 }
 export default UserInfo;
 
-UserInfo.prototype = {
+UserInfo.propTypes = {
   name: PropTypes.string,
-  value: PropTypes.int,
+  value: PropTypes.number,
   measure: PropTypes.string,
   svg: PropTypes.string,
   extraClass: PropTypes.string,

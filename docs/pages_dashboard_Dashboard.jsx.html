@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/dashboard/Dashboard.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/dashboard/Dashboard.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * All elements of charts
+ */
+
+import React from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { fetchering } from "../../mocks/fetch";
+import Host from "../../Components/Host/Host";
+import MenuVertical from "../../Components/Menu-vertical/menu-vertical";
+import UserInfo from "../../Components/UserInfo/UserInfo";
+import Activity from "../../Components/recharts/Activity/Activity";
+import Sessions from "../../Components/recharts/Session/Session";
+import Performance from "../../Components/recharts/Performance/Performance";
+import Score from "../../Components/recharts/Score/Score";
+import MenuHorizontal from "../../Components/Menu-horizontal/menu-horizontal";
+import calories from "../../assets/calories.svg";
+import glucides from "../../assets/glucides.svg";
+import lipides from "../../assets/lipides.svg";
+import proteines from "../../assets/proteines.svg";
+
+/**
+ *@description all datavisualisations of the trainning performances of an user
+ * @returns {JSX element} datavisualisation of all selected user datas
+ */
+function Dashboard() {
+  const { id } = useParams();
+  const [error, setError] = useState(false);
+  const [user, setUser] = useState({});
+  const [userActivity, setUserActivity] = useState({});
+  const [userSessions, setUserSessions] = useState({});
+  const [userPerformance, setUserPerformance] = useState({});
+
+  /**
+   * call all fetch _ if error, return error span
+   * commuication with json
+   */
+  useEffect(() => {
+    fetchering(
+      id,
+      setUser,
+      setUserActivity,
+      setUserPerformance,
+      setUserSessions,
+      setError,
+    );
+  }, [id]);
+  if (error) {
+    return &lt;span>Oups il y a eu un problème&lt;/span>;
+  }
+
+  return (
+    &lt;div>
+      &lt;MenuHorizontal />
+      &lt;MenuVertical />
+      &lt;div className='dataSection'>
+        &lt;Host name={user?.userInfos?.firstName} />
+        &lt;div className='dataSection__chart'>
+          &lt;Activity data={userActivity?.sessions} />
+          &lt;div className='dataSection__chart--dis'>
+            &lt;Sessions data={userSessions?.sessions} />
+            &lt;Performance data={userPerformance?.data} />
+            &lt;Score dataScore={user?.score} dataTodayScore={user?.todayScore} />
+          &lt;/div>
+          &lt;div className='dataSection__chart--userInfo'>
+            &lt;UserInfo
+              name='Calories'
+              value={user?.keyData?.calorieCount}
+              measure='kCal'
+              svg={calories}
+              extraClass='calories'
+            />
+            &lt;UserInfo
+              name='Proteines'
+              value={user?.keyData?.proteinCount}
+              measure='g'
+              svg={proteines}
+              extraClass='proteines'
+            />
+            &lt;UserInfo
+              name='Glucides'
+              value={user?.keyData?.carbohydrateCount}
+              measure='g'
+              svg={glucides}
+              extraClass='glucides'
+            />
+            &lt;UserInfo
+              name='Lipides'
+              value={user?.keyData?.lipidCount}
+              measure='g'
+              svg={lipides}
+              extraClass='lipides'
+            />
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  );
+}
+
+export default Dashboard;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Activity">Activity</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#Error">Error</a></li><li><a href="global.html#Host">Host</a></li><li><a href="global.html#Performance">Performance</a></li><li><a href="global.html#Profil">Profil</a></li><li><a href="global.html#Score">Score</a></li><li><a href="global.html#Sessions">Sessions</a></li><li><a href="global.html#UnderConstruction">UnderConstruction</a></li><li><a href="global.html#UserInfo">UserInfo</a></li><li><a href="global.html#fetchering">fetchering</a></li><li><a href="global.html#getFetch">getFetch</a></li><li><a href="global.html#link">link</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Sat Jan 28 2023 15:41:22 GMT+0100 (heure normale d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

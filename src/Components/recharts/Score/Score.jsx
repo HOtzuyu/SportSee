@@ -54,7 +54,7 @@ function Score({ dataScore, dataTodayScore }) {
 
 export default Score;
 
-Performance.prototype = {
-  dataScore: PropTypes.int.isRequired,
-  dataTodayScore: PropTypes.int.isRequired,
+Performance.propTypes = {
+  dataScore: PropTypes.int,
+  dataTodayScore: PropTypes.int,
 };

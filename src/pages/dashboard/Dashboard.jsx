@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchering } from "../../mocks/fetch";
 import Host from "../../Components/Host/Host";
-import MenuVertical from "../../Components/Menu-vertical/menu-vertical";
+import MenuVertical from "../../Components/nav/Menu-vertical/menu-vertical";
 import UserInfo from "../../Components/UserInfo/UserInfo";
 import Activity from "../../Components/recharts/Activity/Activity";
 import Sessions from "../../Components/recharts/Session/Session";

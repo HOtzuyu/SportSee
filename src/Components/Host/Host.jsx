@@ -24,6 +24,6 @@ function Host({ name }) {
 
 export default Host;
 
-Host.prototype = {
+Host.propTypes = {
   name: PropTypes.string.isRequired,
 };

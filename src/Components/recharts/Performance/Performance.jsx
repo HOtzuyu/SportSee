@@ -53,6 +53,6 @@ function Performance({ data }) {
 
 export default Performance;
 
-Performance.prototype = {
-  data: PropTypes.array.isRequired,
+Performance.propTypes = {
+  data: PropTypes.array,
 };

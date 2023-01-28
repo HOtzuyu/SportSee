@@ -114,6 +114,6 @@ function Sessions({ data }) {
 
 export default Sessions;
 
-Sessions.prototype = {
+Sessions.propTypes = {
   data: PropTypes.array.isRequired,
 };

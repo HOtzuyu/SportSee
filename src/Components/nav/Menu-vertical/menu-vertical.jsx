@@ -3,10 +3,10 @@
  */
 
 import React from "react";
-import yogaIcon from "../../assets/yoga.svg";
-import natationIcon from "../../assets/natation.svg";
-import veloIcon from "../../assets/velo.svg";
-import musculationIcon from "../../assets/musculation.svg";
+import yogaIcon from "../../../assets/yoga.svg";
+import natationIcon from "../../../assets/natation.svg";
+import veloIcon from "../../../assets/velo.svg";
+import musculationIcon from "../../../assets/musculation.svg";
 
 function MenuVertical() {
   return (
