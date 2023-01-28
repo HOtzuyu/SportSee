@@ -11,6 +11,7 @@
 3. [BACK-END](#back-end)
 4. [Technologies](#technologies)
 5. [Installation](#installation)
+6. [Author](#author)
 
 ## Presentation
 
@@ -52,7 +53,7 @@ IDE :
 
 ---
 
-For launch the projecf in local.
+For launch the project in local.
 
 >
 
@@ -63,4 +64,14 @@ $ npm run sass
 $ npm start
 ```
 
-Side information: Clone, install and run `the back-end` (with yarn) before start the project
+Side information: Clone, install and run `the back-end` (with yarn) before start the project !
+
+You can generate jsdoc after cloning.
+
+```
+npm run doc
+```
+
+# Author
+
+> Jonhathan HO TZU YU
