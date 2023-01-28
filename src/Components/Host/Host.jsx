@@ -1,7 +1,13 @@
 /**
- * Custom Hello word with personal name of user
- * @param {string} name
- * @returns format hello [name]
+ * Welcome text
+ */
+
+import PropTypes from "prop-types";
+
+/**
+ * @description Custom Hello word with personal name of user
+ * @param {String} name
+ * @returns element HTML
  */
 function Host({ name }) {
   return (
@@ -17,3 +23,7 @@ function Host({ name }) {
 }
 
 export default Host;
+
+Host.prototype = {
+  name: PropTypes.string.isRequired,
+};

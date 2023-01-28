@@ -1,3 +1,7 @@
+/**
+ * Datavisualisation of the activity
+ */
+
 import React from "react";
 import {
   BarChart,
@@ -9,16 +13,17 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import PropTypes from "prop-types";
 
 /**
- * creat a line chart for look the activity in a week of the user
+ * @description creat a line chart for look the activity in a week of the user
  * @param {array} data
  * @returns a bar chart
  */
 function Activity({ data }) {
   /**
-   * formating value for legend
-   * @param {*} value
+   * @description formating value for legend
+   * @param {Color} value
    * @returns value
    */
   function activity__legend(value) {
@@ -26,16 +31,16 @@ function Activity({ data }) {
   }
 
   /**
-   * format creen hover
+   * @description format screen when the mouse is hover the chart
    * @param {boolean} active
    * @param {int} payload
-   * @returns screen values
+   * @returns screen values in Kg and Kcal
    */
   function tooltip({ active, payload }) {
     if (active) {
       return (
         <div className='activity__tooltip'>
-          <p className='activity__tooltip--num'>{payload[0].value}kg</p>
+          <p className='activity__tooltip--num'>{payload[0].value}Kg</p>
           <p className='activity__tooltip--num'>{payload[1].value}Kcal</p>
         </div>
       );
@@ -89,3 +94,7 @@ function Activity({ data }) {
 }
 
 export default Activity;
+
+Activity.prototype = {
+  data: PropTypes.array.isRequired,
+};

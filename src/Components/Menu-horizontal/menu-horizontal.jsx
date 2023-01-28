@@ -1,12 +1,13 @@
+/**
+ * This function contains the menuHorizontal part that is shown on the top of the screen on this website,
+ * and allow us to navigate between the different pages.
+ */
+
 import { Link } from "react-router-dom";
 import Dropdown from "../Dropdown/dropdown";
 import Logo from "../../assets/logo.svg";
 import "../../utils/css/style.css";
 
-/**
- * This function contains the menuHorizontal part that is shown on the top of the screen on this website,
- * and allow us to navigate between the different pages.
- */
 function MenuHorizontal() {
   return (
     <nav className='menuHorizontal'>

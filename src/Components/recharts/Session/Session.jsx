@@ -12,15 +12,16 @@ import {
   Rectangle,
   CartesianGrid,
 } from "recharts";
+import PropTypes from "prop-types";
 
 /**
- * creat a line chart for look the sessions in a week of the user
+ * @description creat a line chart for look the sessions in a week of the user
  * @param {array} data
  * @returns a line chart
  */
 function Sessions({ data }) {
   /**
-   * add const week with the letter of each day of the week
+   * @description add const week with the letter of each day of the week
    * @param {int} num
    * @returns the first letter of the day
    */
@@ -30,8 +31,8 @@ function Sessions({ data }) {
   }
 
   /**
-   * fonction return form and data of tooltip
-   * @param {array} payload / array of objects present the custom tooltip
+   * @description fonction return form and data of tooltip
+   * @param {array} payload
    * @returns a custom tooltip
    */
   function CustomTooltip({ payload }) {
@@ -112,3 +113,7 @@ function Sessions({ data }) {
 }
 
 export default Sessions;
+
+Sessions.prototype = {
+  data: PropTypes.array.isRequired,
+};

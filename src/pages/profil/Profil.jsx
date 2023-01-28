@@ -8,7 +8,7 @@ import karl from "../../assets/karl.png";
 import cecilia from "../../assets/cecilia.png";
 
 /**
- * Displays user profile images.
+ * @description Displays user profile images.
  * @returns {JSX.Element} A JSX element representing the user profile images.
  */
 const Profil = () => {

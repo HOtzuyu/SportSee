@@ -4,7 +4,7 @@
 let link = "http://localhost:3000/user/"
 
 /**
- * call the JSON
+ * @description call the JSON
  * @param {string} id 
  * @param {string} context 
  * @returns promess || error

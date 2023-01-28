@@ -1,12 +1,13 @@
+/**
+ * This function contains the menuVertical part that is shown on the left of the screen on this website
+ */
+
 import React from "react";
 import yogaIcon from "../../assets/yoga.svg";
 import natationIcon from "../../assets/natation.svg";
 import veloIcon from "../../assets/velo.svg";
 import musculationIcon from "../../assets/musculation.svg";
 
-/**
- * This function contains the menuVertical part that is shown on the left of the screen on this website
- */
 function MenuVertical() {
   return (
     <div className='menuVertical'>

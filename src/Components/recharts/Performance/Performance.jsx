@@ -1,3 +1,7 @@
+/**
+ * Datavisualisation of the performance
+ */
+
 import {
   Radar,
   RadarChart,
@@ -6,15 +10,16 @@ import {
   PolarRadiusAxis,
   ResponsiveContainer,
 } from "recharts";
+import PropTypes from "prop-types";
 
 /**
- * creat a radar chart for look the parformances of the user
+ * @description creat a radar chart for look the parformances of the user
  * @param {array} data
  * @returns a radar chart
  */
 function Performance({ data }) {
   /**
-   * count the number of element and return a translate of the elements
+   * @description count the number of element and return a translate of the elements
    * @param {int} num
    * @returns an array of string
    */
@@ -47,3 +52,7 @@ function Performance({ data }) {
 }
 
 export default Performance;
+
+Performance.prototype = {
+  data: PropTypes.array.isRequired,
+};

@@ -4,9 +4,10 @@
 
 import { ResponsiveContainer, RadialBarChart, RadialBar } from "recharts";
 import React from "react";
+import PropTypes from "prop-types";
 
 /**
- * creat a radial chart for look the score of the user
+ * @description creat a radial chart for look the score of the user
  * @param {int} dataScore
  * @param {int} dataTodayScore
  * @returns a radial chart
@@ -52,3 +53,8 @@ function Score({ dataScore, dataTodayScore }) {
 }
 
 export default Score;
+
+Performance.prototype = {
+  dataScore: PropTypes.int.isRequired,
+  dataTodayScore: PropTypes.int.isRequired,
+};

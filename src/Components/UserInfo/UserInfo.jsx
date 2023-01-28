@@ -1,5 +1,7 @@
+import PropTypes from "prop-types";
+
 /**
- * Creat card of user informations
+ * @description Creat card of user informations
  * @param {string} name
  * @param {int} value
  * @param {string} measure
@@ -28,3 +30,11 @@ function UserInfo({ name, value, measure, svg, extraClass }) {
   );
 }
 export default UserInfo;
+
+UserInfo.prototype = {
+  name: PropTypes.string,
+  value: PropTypes.int,
+  measure: PropTypes.string,
+  svg: PropTypes.string,
+  extraClass: PropTypes.string,
+};
