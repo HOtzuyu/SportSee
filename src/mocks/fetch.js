@@ -8,12 +8,12 @@ import {
 
 /**
  * @description link the fetch with the call api for all elements 
- * @param {string} id 
- * @param {const} setUser 
- * @param {const} setUserActivity 
- * @param {const} setUserPerformance 
- * @param {const} setUserSessions 
- * @param {const} setError 
+ * @param {String} id 
+ * @param {Const} setUser 
+ * @param {Const} setUserActivity 
+ * @param {Const} setUserPerformance 
+ * @param {Const} setUserSessions 
+ * @param {Const} setError 
  * @returns function
  */
 export function fetchering(id, setUser, setUserActivity, setUserPerformance, setUserSessions, setError) {

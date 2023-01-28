@@ -2,12 +2,12 @@ import PropTypes from "prop-types";
 
 /**
  * @description Creat card of user informations
- * @param {string} name
- * @param {int} value
- * @param {string} measure
- * @param {string} svg
- * @param {string} extraClass
- * @returns a card with user informations
+ * @param {String} name
+ * @param {Number} value
+ * @param {String} measure
+ * @param {String} svg
+ * @param {String} extraClass
+ * @returns {JSX} displaying the card with user informations
  */
 function UserInfo({ name, value, measure, svg, extraClass }) {
   return (

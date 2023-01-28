@@ -16,14 +16,14 @@ import PropTypes from "prop-types";
 
 /**
  * @description creat a line chart for look the sessions in a week of the user
- * @param {array} data
- * @returns a line chart
+ * @param {Array} data
+ * @returns {JSX} displaying the line chart sessions
  */
 function Sessions({ data }) {
   /**
    * @description add const week with the letter of each day of the week
-   * @param {int} num
-   * @returns the first letter of the day
+   * @param {Number} num
+   * @returns {Array} the first letter of the day
    */
   function weekDays(num) {
     const week = ["L", "M", "M", "J", "V", "S", "D"];
@@ -32,7 +32,7 @@ function Sessions({ data }) {
 
   /**
    * @description fonction return form and data of tooltip
-   * @param {array} payload
+   * @param {Array} payload
    * @returns a custom tooltip
    */
   function CustomTooltip({ payload }) {

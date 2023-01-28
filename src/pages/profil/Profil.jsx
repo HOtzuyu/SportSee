@@ -9,7 +9,7 @@ import cecilia from "../../assets/cecilia.png";
 
 /**
  * @description Displays user profile images.
- * @returns {JSX.Element} A JSX element representing the user profile images.
+ * @returns {JSX} displaying the user profile images.
  */
 const Profil = () => {
   return (

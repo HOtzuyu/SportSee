@@ -17,8 +17,8 @@ import PropTypes from "prop-types";
 
 /**
  * @description creat a line chart for look the activity in a week of the user
- * @param {array} data
- * @returns a bar chart
+ * @param {Array} data
+ * @returns {JSX} displaying the bar chart of activity
  */
 function Activity({ data }) {
   /**

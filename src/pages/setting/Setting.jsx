@@ -4,6 +4,11 @@
 
 import UnderConstruction from "../../Components/UnderConstruction/UnderConstruction";
 import MenuHorizontal from "../../Components/Menu-horizontal/menu-horizontal";
+
+/**
+ *
+ * @returns {JSX} displaying the page underconstruction
+ */
 function Setting() {
   return (
     <div>

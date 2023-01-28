@@ -11,6 +11,11 @@ import Community from "./pages/community/Community";
 import Error from "./Components/Error/error";
 import "../src/utils/css/style.css";
 
+/**
+ * Main component of the application that manages the routing of the different pages
+ *
+ * @returns {JSX.Element} The router component
+ */
 const App = () => {
   return (
     <React.StrictMode>

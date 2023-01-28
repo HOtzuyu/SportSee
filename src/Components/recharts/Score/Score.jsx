@@ -8,9 +8,9 @@ import PropTypes from "prop-types";
 
 /**
  * @description creat a radial chart for look the score of the user
- * @param {int} dataScore
- * @param {int} dataTodayScore
- * @returns a radial chart
+ * @param {Number} dataScore
+ * @param {Number} dataTodayScore
+ * @returns {JSX} displaying the radial chart of Scrore
  */
 function Score({ dataScore, dataTodayScore }) {
   // scoreValue === user id's score

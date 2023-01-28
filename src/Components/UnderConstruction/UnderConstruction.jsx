@@ -1,6 +1,6 @@
 /**
  *
- * @returns text under construction
+ * @returns {JSX} displaying the text under construction
  */
 function UnderConstruction() {
   return (

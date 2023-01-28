@@ -20,8 +20,8 @@ import lipides from "../../assets/lipides.svg";
 import proteines from "../../assets/proteines.svg";
 
 /**
- *@description all datavisualisations of the trainning performances of an user
- * @returns {JSX element} datavisualisation of all selected user datas
+ * @description all datavisualisations of the trainning performances of an user
+ * @returns {JSX} displaying the datavisualisation of all selected user datas
  */
 function Dashboard() {
   const { id } = useParams();

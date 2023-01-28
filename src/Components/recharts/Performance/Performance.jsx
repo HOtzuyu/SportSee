@@ -15,13 +15,13 @@ import PropTypes from "prop-types";
 /**
  * @description creat a radar chart for look the parformances of the user
  * @param {array} data
- * @returns a radar chart
+ * @returns {JSX} displaying the radar chart
  */
 function Performance({ data }) {
   /**
    * @description count the number of element and return a translate of the elements
-   * @param {int} num
-   * @returns an array of string
+   * @param {Number} num
+   * @returns {Array} of string of differents values Performances
    */
   function valeurs(num) {
     const perf = [

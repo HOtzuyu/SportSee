@@ -5,8 +5,8 @@ let link = "http://localhost:3000/user/"
 
 /**
  * @description call the JSON
- * @param {string} id 
- * @param {string} context 
+ * @param {String} id 
+ * @param {String} context 
  * @returns promess || error
  */
 export async function getFetch(id, context) {

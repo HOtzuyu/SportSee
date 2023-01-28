@@ -8,6 +8,9 @@ import natationIcon from "../../../assets/natation.svg";
 import veloIcon from "../../../assets/velo.svg";
 import musculationIcon from "../../../assets/musculation.svg";
 
+/**
+ * @returns {JSX} displaying the vertical navbar
+ */
 function MenuVertical() {
   return (
     <div className='menuVertical'>
