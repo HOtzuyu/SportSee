@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Components/Error/error.jsx</title>
+    <title>JSDoc: Source: Components/nav/Menu-vertical/menu-vertical.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Components/Error/error.jsx</h1>
+    <h1 class="page-title">Source: Components/nav/Menu-vertical/menu-vertical.jsx</h1>
 
     
 
@@ -26,29 +26,42 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { Link } from "react-router-dom";
+            <pre class="prettyprint source linenums"><code>/**
+ * This function contains the menuVertical part that is shown on the left of the screen on this website
+ */
+
+import React from "react";
+import yogaIcon from "../../../assets/yoga.svg";
+import natationIcon from "../../../assets/natation.svg";
+import veloIcon from "../../../assets/velo.svg";
+import musculationIcon from "../../../assets/musculation.svg";
 
 /**
- * This function display the Error component.
- * @returns {JSX} The JSX for displaying the error message and a link to the home page.
+ * @returns {JSX} displaying the vertical navbar
  */
-function Error() {
+function MenuVertical() {
   return (
-    &lt;div className='error'>
-      &lt;h1 className='error__number'>404&lt;/h1>
-      &lt;h2 className='error__text'>
-        Oups! La page que vous demandez n'existe pas.
-      &lt;/h2>
-      &lt;div className='error__back'>
-        &lt;Link className='error__back--text' to='/'>
-          Retourner sur la page d'accueil
-        &lt;/Link>
+    &lt;div className='menuVertical'>
+      &lt;div className='menuVertical__icon'>
+        &lt;div className='menuVertical__icon--block'>
+          &lt;img className='icon' src={yogaIcon} alt='' />
+        &lt;/div>
+        &lt;div className='menuVertical__icon--block'>
+          &lt;img className='icon' src={natationIcon} alt='' />
+        &lt;/div>
+        &lt;div className='menuVertical__icon--block'>
+          &lt;img className='icon' src={veloIcon} alt='' />
+        &lt;/div>
+        &lt;div className='menuVertical__icon--block'>
+          &lt;img className='icon' src={musculationIcon} alt='' />
+        &lt;/div>
       &lt;/div>
+      &lt;p className='menuVertical__copyright'> Copiryght, SportSee 2020 &lt;/p>
     &lt;/div>
   );
 }
 
-export default Error;
+export default MenuVertical;
 </code></pre>
         </article>
     </section>

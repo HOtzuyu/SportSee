@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Components/Error/error.jsx</title>
+    <title>JSDoc: Source: App.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Components/Error/error.jsx</h1>
+    <h1 class="page-title">Source: App.jsx</h1>
 
     
 
@@ -26,29 +26,41 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { Link } from "react-router-dom";
+            <pre class="prettyprint source linenums"><code>/**
+ * File for Routers
+ */
+
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Profil from "./pages/profil/Profil";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Setting from "./pages/setting/Setting";
+import Community from "./pages/community/Community";
+import Error from "./Components/Error/error";
+import "../src/utils/css/style.css";
 
 /**
- * This function display the Error component.
- * @returns {JSX} The JSX for displaying the error message and a link to the home page.
+ * Main component of the application that manages the routing of the different pages
+ *
+ * @returns {JSX.Element} The router component
  */
-function Error() {
+const App = () => {
   return (
-    &lt;div className='error'>
-      &lt;h1 className='error__number'>404&lt;/h1>
-      &lt;h2 className='error__text'>
-        Oups! La page que vous demandez n'existe pas.
-      &lt;/h2>
-      &lt;div className='error__back'>
-        &lt;Link className='error__back--text' to='/'>
-          Retourner sur la page d'accueil
-        &lt;/Link>
-      &lt;/div>
-    &lt;/div>
+    &lt;React.StrictMode>
+      &lt;Router>
+        &lt;Routes>
+          &lt;Route path='/' element={&lt;Profil />} />
+          &lt;Route path='/user/:id' element={&lt;Dashboard />} />
+          &lt;Route path='/setting' element={&lt;Setting />} />
+          &lt;Route path='/community' element={&lt;Community />} />
+          &lt;Route path='*' element={&lt;Error />} />
+        &lt;/Routes>
+      &lt;/Router>
+    &lt;/React.StrictMode>
   );
-}
+};
 
-export default Error;
+export default App;
 </code></pre>
         </article>
     </section>

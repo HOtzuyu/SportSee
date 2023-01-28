@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: Components/Error/error.jsx</title>
+    <title>JSDoc: Source: pages/community/Community.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: Components/Error/error.jsx</h1>
+    <h1 class="page-title">Source: pages/community/Community.jsx</h1>
 
     
 
@@ -26,29 +26,27 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { Link } from "react-router-dom";
+            <pre class="prettyprint source linenums"><code>/**
+ * JSX for communityPage (communauté)
+ */
+
+import UnderConstruction from "../../Components/UnderConstruction/UnderConstruction";
+import MenuHorizontal from "../../Components/Menu-horizontal/menu-horizontal";
 
 /**
- * This function display the Error component.
- * @returns {JSX} The JSX for displaying the error message and a link to the home page.
+ *
+ * @returns {JSX} displaying the community page under construction
  */
-function Error() {
+function Community() {
   return (
-    &lt;div className='error'>
-      &lt;h1 className='error__number'>404&lt;/h1>
-      &lt;h2 className='error__text'>
-        Oups! La page que vous demandez n'existe pas.
-      &lt;/h2>
-      &lt;div className='error__back'>
-        &lt;Link className='error__back--text' to='/'>
-          Retourner sur la page d'accueil
-        &lt;/Link>
-      &lt;/div>
+    &lt;div>
+      &lt;MenuHorizontal />
+      &lt;UnderConstruction />
     &lt;/div>
   );
 }
 
-export default Error;
+export default Community;
 </code></pre>
         </article>
     </section>
