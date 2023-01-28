@@ -4,9 +4,9 @@
  */
 
 import { Link } from "react-router-dom";
-import Dropdown from "../Dropdown/dropdown";
-import Logo from "../../assets/logo.svg";
-import "../../utils/css/style.css";
+import Dropdown from "../../Dropdown/dropdown";
+import Logo from "../../../assets/logo.svg";
+import "../../../utils/css/style.css";
 
 /**
  * @returns {JSX} displaying the horizontal navbar

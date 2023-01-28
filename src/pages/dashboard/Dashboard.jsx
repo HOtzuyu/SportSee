@@ -13,7 +13,7 @@ import Activity from "../../Components/recharts/Activity/Activity";
 import Sessions from "../../Components/recharts/Session/Session";
 import Performance from "../../Components/recharts/Performance/Performance";
 import Score from "../../Components/recharts/Score/Score";
-import MenuHorizontal from "../../Components/Menu-horizontal/menu-horizontal";
+import MenuHorizontal from "../../Components/nav/Menu-horizontal/menu-horizontal";
 import calories from "../../assets/calories.svg";
 import glucides from "../../assets/glucides.svg";
 import lipides from "../../assets/lipides.svg";
