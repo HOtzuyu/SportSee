@@ -96,5 +96,5 @@ function Activity({ data }) {
 export default Activity;
 
 Activity.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.array,
 };

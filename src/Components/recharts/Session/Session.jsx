@@ -115,5 +115,5 @@ function Sessions({ data }) {
 export default Sessions;
 
 Sessions.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.array,
 };
